@@ -1,0 +1,24 @@
+{{!-- <ul>
+  <li>name: {{ this.name }}</li>
+  <li>id: {{ this.id }}</li>
+  <li>url: {{ this.url }}</li>
+  <li>owner: {{ this.owner.login }}</li>
+</ul> --}}
+<h3 style="margin-left: 15px;">Your Repos</h3>
+
+{{#each data}}
+<p>{{data.length}}</p>
+<ul class="collection">
+  <li class="collection-item avatar">
+    <img src="{{avatar_url}}" alt="" class="circle">
+    <p>
+      Name: {{name}} <br>
+      Id: {{id}}<br>
+      Email: {{email}}<br>
+      Url: {{url}}<br>
+      Created at: {{created_at}}
+    </p>
+  </li>
+</ul>
+{{/each}}
+<a style="width: 300px; text-align: center; margin-top: 30px; margin-left: 20px; margin-bottom: 200px" href="/user" class="waves-effect waves-light btn-large red lighten-2">Return to user page</a>

@@ -1,0 +1,23 @@
+{
+  "name": "companyprojectreactnode",
+  "version": "1.0.0",
+  "description": "The project where i have to use react and express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.0",
+    "next": "^8.1.0",
+    "querystring": "^0.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
