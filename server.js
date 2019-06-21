@@ -9,29 +9,9 @@ const app = express();
 
 mongoose.connect("mongodb://localhost/GitUsers", { useNewUrlParser: true });
 
-//Model of User
-let userSchema = mongoose.Schema({
-  id: Number,
-  name: String,
-  email: String,
-  url: String,
-  avatar_url: String,
-  created_at: String
-});
-
-let User = mongoose.model("User", userSchema);
-//Model of User
-
-//Model of Repositories
-let repoSchema = mongoose.Schema({
-  id: Number,
-  name: String,
-  url: String,
-  owner: String
-});
-
-let Repository = mongoose.model("Repository", repoSchema);
-//Model of Repositories
+//Models
+let User = require(__dirname + '/models/User');
+let Repository = require(__dirname + '/models/Repository');
 
 // Midleware
 // Register Handlebars view engine
@@ -184,7 +164,9 @@ app.get("/user/repo", (req, res) => {
             });
 
             newRepo.save((err, response) => {
-              console.log(err);
+              if(err) {
+                console.log(err);
+              }
             });
           }
         });
